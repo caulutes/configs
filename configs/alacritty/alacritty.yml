@@ -1,0 +1,81 @@
+#########################################
+### MINHAS CONFIGURAÇÕES DO ALACRITTY ###
+#########################################
+
+# Seta o alacritty como terminal padrão
+env:
+  # TERM: alacritty
+  TERM: alacritty
+
+window:
+  # Título da janela
+  title: Alacritty
+
+  # Transparência
+  opacity: 0.1
+
+  # Permitir que outros aplicativos alterem o nome da janela
+  dynamic_title: true
+
+# Configuração do histórico
+scrolling:
+  history: 50000
+
+# Configuração de fonte
+font:
+  normal:
+    family: Fantasque Sans Mono
+    style: Regular
+
+  bold:
+    family: Fantasque Sans Mono
+    style: Bold
+
+  italic:
+    family: Fantasque Sans Mono
+    style: Italic
+
+  bold_italic:
+    family: Fantasque Sans Mono
+    style: Bold Italic
+
+  # Tamanho da fonte
+  size: 12.5
+
+# Configuração de Cores
+colors:
+  # Cores padrão
+  primary:
+   background: '#222222'
+   foreground: '#F9F9F9'
+
+  # Cores Normais
+  normal:
+    black:   '#3f3f3f'
+    red:     '#cc0000'
+    green:   '#4e9a06'
+    yellow:  '#c4a000'
+    blue:    '#94bff3'
+    magenta: '#85678f'
+    cyan:    '#06989a'
+    white:   '#dcdccc'
+
+  # Cors Claras
+  bright:
+    black:   '#545454'
+    red:     '#fc5454'
+    green:   '#8ae234'
+    yellow:  '#fce94f'
+    blue:    '#94bff3'
+    magenta: '#b294bb'
+    cyan:    '#93e0e3'
+    white:   '#ffffff'
+
+# Cor do cursor
+  cursor:
+    text: CellBackground
+    cursor: CellForeground
+
+# Shell padrão
+shell:
+  program: /usr/bin/zsh

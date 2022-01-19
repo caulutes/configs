@@ -1,0 +1,31 @@
+# Local onde está instalado ohmyzsh
+export ZSH="/home/caua/.oh-my-zsh"
+
+# Tema do ohmyzsh
+ZSH_THEME="cloud"
+
+# Plugins
+plugins=(git)
+source $ZSH/oh-my-zsh.sh
+
+############################
+### MINHAS CONFIGURAÇÕES ###
+############################
+
+
+# Alias
+alias ls='colorls'
+alias b='sudo nvim ~/.config/bspwm/bspwmrc'
+alias s='sudo nvim ~/.config/sxhkd/sxhkdrc'
+alias p='sudo nvim ~/.config/polybar/'
+alias conzsh='sudo nvim ~/.zshrc'
+alias ala='sudo nvim ~/.config/alacritty/alacritty.yml'
+alias t='ttyper'
+
+# Adiciona ruby ao path
+export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
+export PATH="$PATH:$GEM_HOME/bin"
+
+# Inicia o pfetch
+pfetch
+

@@ -1,0 +1,94 @@
+#########################
+### SUPER + TECLAS... ###
+#########################
+
+# Terminal
+super + Return
+	alacritty
+
+# Rofi
+super + alt + l
+	rofi -show drun
+
+# Matar processo
+super + q 
+    bspc node -c
+
+# Navegador
+super + w
+    google-chrome-stable
+
+# Virtualbox
+super + m
+    virtualbox
+
+# Pavucontrol
+super + p
+    pavucontrol
+
+# Emulador nintendo
+super + s
+    snes9x-gtk
+
+# Configuração controle nintendo
+super + j
+    jstest-gtk
+###############################
+###  SUPER + SHIFT + TECLAS ###
+###############################
+
+# Reinicia o sxhkd
+super + shift + s 
+	pkill -USR1 -x sxhkd
+
+# Reinicia o bspwm
+super + shift + r
+	~/.config/bspwm/bspwmrc
+
+##############################
+### CONFIGURAÇÃO DA JANELA ###
+##############################
+
+# Trocar o estado da janela
+super + space
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+# Alternar entre modo tela cheia e normal
+super + f
+	bspc desktop -l next
+
+# Muda de janela em foco
+super + {_,shift + }{Left,Down,Up,Right}
+	bspc node -{f,s} {west,south,north,east}
+
+# Enviar janela para uma outra área de trabalho 
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+# Pré selecionar o local da janela
+super + ctrl + {Left,Down,Up,Right}
+	bspc node -p {west,south,north,east}
+
+# Pré selecionar o local da janela Horizontalmente
+super + ctrl + {1-9}
+	bspc node -o 0.{1-9}
+
+# Cancelar a pré seleção
+super + ctrl + space
+	bspc node -p cancel
+
+# Cancelar a pré seleção horizontal
+super + alt + space
+	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+
+# Escolher o tamanho da janela pelo lado
+super + alt + {Left,Down,Up,Right}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# Escoher o tamanho da janela pelo lado 
+super + alt + shift + {Left,Down,Up,Right}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+# Escolher janela em foco
+super + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
