@@ -10,14 +10,14 @@ timedatectl set-ntp true
 loadkeys br-abnt2
 
 # Criar partições
-cfdisk /dev/mmcblk0
+cfdisk /dev/mmcblk1
 
 # Formatando e montando partições
-mkfs.ext4 /dev/mmcblk0p2
-mkfs.vfat /dev/mmcblk0p1 
-mount /dev/mmcblk0p2 /mnt
+mkfs.ext4 /dev/mmcblk1p2
+mkfs.vfat /dev/mmcblk1p1 
+mount /dev/mmcblk1p2 /mnt
 mkdir -p /mnt/boot/EFI
-mount /dev/mmcblk0p1 /mnt/boot/EFI
+mount /dev/mmcblk1p1 /mnt/boot/EFI
 
 # Criando arquivo swap
 cd /mnt
