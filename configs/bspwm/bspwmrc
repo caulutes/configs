@@ -10,6 +10,9 @@ $HOME/.config/polybar/launch.sh &
 # Configuração da janela polybar
 xdo -N raise "principal"
 
+# Ocultar cursor
+unclutter -idle 3 &
+
 # Configura as teclas de atalho
 pgrep -x sxhkd > /dev/null || sxhkd &
 
